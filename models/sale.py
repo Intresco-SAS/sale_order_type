@@ -13,10 +13,10 @@ class SaleOrder(models.Model):
         compute="_compute_sale_type_id",
         store=True,
         #readonly=True,
-        states={
-            "draft": [("readonly", False)],
-            "sent": [("readonly", False)],
-        },
+        #states={
+          #  "draft": [("readonly", False)],
+          #  "sent": [("readonly", False)],
+       # },
         default=lambda so: so._default_type_id(),
         ondelete="restrict",
         copy=True,
