@@ -12,7 +12,7 @@ class SaleOrder(models.Model):
         string="Type",
         compute="_compute_sale_type_id",
         store=True,
-        readonly=True,
+        #readonly=True,
         states={
             "draft": [("readonly", False)],
             "sent": [("readonly", False)],
